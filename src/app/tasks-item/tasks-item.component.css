@@ -14,3 +14,16 @@
   align-items: center;
   justify-content: space-between;
 }
+.x {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: "none";
+   font-size: 10px;
+  font-family: inherit;
+  }
