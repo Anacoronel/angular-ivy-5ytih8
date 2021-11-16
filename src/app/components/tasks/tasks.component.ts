@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Task} from '../../Task'
+import {Task} from '../../Task';
 import{TaskService} from '../../task.service';
 @Component({
   selector: 'app-tasks',
@@ -13,7 +13,8 @@ tasks: Task[]= [];
   ) { }
 
   ngOnInit(): void {
-    this.tasks = this.taskService.getTasks();
+     this.taskService.getTasks().subscribe(tasks =>
+      this.tasks = tasks);
   }
 
 }
