@@ -1,7 +1,7 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
+import{TaskService} from './task.service'
 import { AppComponent } from './app.component';
 
 import { HeaderComponent } from './components/header/header.component';
@@ -14,5 +14,6 @@ import { TasksItemComponent } from './tasks-item/tasks-item.component';
   declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
+  providers: [TaskService],
 })
 export class AppModule { }
