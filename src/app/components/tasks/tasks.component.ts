@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Task} from '../../Task'
 import { TASKS} from '../../mock-tasks';
-
+import{TaskService} from '../../task.service';
 @Component({
   selector: 'app-tasks',
   templateUrl: './tasks.component.html',
