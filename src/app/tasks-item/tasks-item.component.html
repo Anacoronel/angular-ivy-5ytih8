@@ -1,4 +1,6 @@
 <div class= "task">
-  <h3>{{task.text}}<button class="x">Borrar</button></h3>
+  <h3>{{task.text}}<button class="x"
+    (click)="onDelete(task)"
+    >Borrar</button></h3>
   <p>{{task.day}} </p>
 </div>
