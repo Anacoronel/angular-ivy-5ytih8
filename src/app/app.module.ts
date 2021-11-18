@@ -9,6 +9,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { TasksComponent } from './components/tasks/tasks.component';
 import { TasksItemComponent } from './tasks-item/tasks-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
+import {RouterModule, Routes} from '@angular/router';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule],
