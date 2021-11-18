@@ -11,6 +11,7 @@ import { TasksItemComponent } from './tasks-item/tasks-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import {RouterModule, Routes} from '@angular/router';
 import {AboutComponent} from './components/about/about.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -19,7 +20,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot( appRoutes, { enableTracing: true })],
-  declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent, AboutComponent ],
+  declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent, AboutComponent, FooterComponent ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
  providers:[TaskService ]
