@@ -11,8 +11,12 @@ import { TasksItemComponent } from './tasks-item/tasks-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import {RouterModule, Routes} from '@angular/router';
 
+const appRoutes: Routes = [
+  {path: '', component: TasksComponent}
+]
+
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, HttpClientModule],
+  imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot( appRoutes, { enableTracing: true })],
   declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
