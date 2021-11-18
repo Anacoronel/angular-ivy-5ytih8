@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-
+import{UiService} from '../../ui.service';
+import {Subscription} from 'rxjs';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,11 +10,17 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   title:string = 'My Task List';
-  constructor() { }
+showAddTask: boolean=false;
+subscription: Subscription;
 
+  constructor(
+    private uiService: UiService
+  ) { }
+  
   ngOnInit() :void {
   }
 toggleAddTask() {
+this.uiService.toggleAddTask();
 
 }
 }
