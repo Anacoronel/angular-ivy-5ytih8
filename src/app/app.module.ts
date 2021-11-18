@@ -10,14 +10,16 @@ import { TasksComponent } from './components/tasks/tasks.component';
 import { TasksItemComponent } from './tasks-item/tasks-item.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import {RouterModule, Routes} from '@angular/router';
+import {AboutComponent} from './components/about/about.component';
 
 const appRoutes: Routes = [
-  {path: '', component: TasksComponent}
+  {path: '', component: TasksComponent},
+  {path:'About', component: AboutComponent},
 ]
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, HttpClientModule, RouterModule.forRoot( appRoutes, { enableTracing: true })],
-  declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent ],
+  declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent, AboutComponent ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
  providers:[TaskService ]
