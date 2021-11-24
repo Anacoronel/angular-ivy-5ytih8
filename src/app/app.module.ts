@@ -12,6 +12,7 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import {RouterModule, Routes} from '@angular/router';
 import {AboutComponent} from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { UiService } from './ui.service';
 
 const appRoutes: Routes = [
   {path: '', component: TasksComponent},
@@ -23,6 +24,6 @@ const appRoutes: Routes = [
   declarations: [ AppComponent,  HeaderComponent, ButtonComponent, TasksComponent, TasksItemComponent, AddTaskComponent, AboutComponent, FooterComponent ],
   bootstrap:    [ AppComponent ],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
- providers:[TaskService ]
+ providers:[TaskService, UiService ],
 })
 export class AppModule { }
